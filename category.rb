@@ -1,11 +1,14 @@
 module CarApplication
-
+  # model
   class Category
-
     def self.create_objects_from_data
-      Data::CATEGORIES.map do |category_data|
+      @@categories ||= Data::CATEGORIES.map do |category_data|
         Category.new({ name: category_data[:name] })
       end
+    end
+
+    def self.all
+      create_objects_from_data
     end
 
     attr_reader :name

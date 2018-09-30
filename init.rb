@@ -27,7 +27,18 @@ require_relative 'category'
 
 module CarApplication
   def self.process
-    category_objects = Category.create_objects_from_data
+    categories = Category.all
+
+    categories.each do |category|
+      category.puts_name
+    end
+
+    # product = Product.all
+    # Product.prices_sum - сумма всех цен продуктов
+    # product.full_name  - полное название машины модель + марка
+
+    # NOTE: ДЗ: Расширить класс Product новыми методами, 
+    # которые выведут сумму цен всех машин
 
     require 'pry'; binding.pry
   end
