@@ -2,7 +2,6 @@ require 'rubygems'
 require 'pry'
 
 require_relative 'data'
-require_relative 'product'
 require_relative 'category'
 
 # NOTE: различие между методами классов и обьектов
