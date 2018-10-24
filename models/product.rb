@@ -1,9 +1,10 @@
-module CarApplication
-  class Product
+require_relative '../data'
 
+module CarApplication::Models
+  class Product
     def self.create_objects_from_data
-      @@products ||=Data::PRODUCTS.map do |product_data|
-          Product.new({ 
+      @@products ||= CarApplication::Data::PRODUCTS.map do |product_data|
+          Product.new({
             brand_name: product_data[:brand_name],
             model:      product_data[:model],
             color:      product_data[:color],
@@ -24,6 +25,5 @@ module CarApplication
       @color      = options[:color]
       @price      = options[:price]
     end
-
   end
 end

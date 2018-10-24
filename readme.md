@@ -1,5 +1,7 @@
 # TODO list:
 
+To run upplication use - $ rackup init.rb 
+
 1) Router.
 2) Connection to the web server.
 3) First view template.

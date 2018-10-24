@@ -4,12 +4,15 @@
     <title>My first web site.</title>
   </head>
   <body>
+    <!-- TODO: В нашем салоне ... Product.count автомобилей, на общую сумму Product.prices_sum ... -->
+
     <a href='/'>Main</a>
     <a href='/hello_world'>Hello world</a>
     <h1>Main</h1>
     <ul>
-      <% categories.each do |category| %>
-        <li><%= category.name %></li>
+      <% products.each do |product| %>
+        <li><%= product.brand_name + ' - ' + product.model %></li>
+        <li><%= # product.full_name - модель - плюс марка %></li>
       <% end %>
     </ul>
   </body>
