@@ -4,3 +4,6 @@
 source 'https://rubygems.org'
 
 gem 'pry'
+
+gem 'puma'
+gem 'sinatra'

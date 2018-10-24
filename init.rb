@@ -1,36 +1,17 @@
-require 'rubygems'
 require 'pry'
-
-require_relative 'data'
-require_relative 'category'
-require_relative 'product'
-
-
-# NOTE: различие между методами классов и обьектов
-# class CarAppllication
-#   def process
-#     puts '1'
-#   end
-# end
-# @object = CarAppllication.new
-# @object.process
-
-# class CarAppllication
-#   def self.process
-#     puts '1'
-#   end
-# end
-# CarAppllication.process
-
-# @object = CarAppllication.new
-
-# @object.process
+# require_relative 'controllers/application_controller.rb'
+require_relative 'models/category'
 
 module CarApplication
-  def self.process
-    # Product.prices_sum - сумма всех цен продуктов
-    # product.full_name  - полное название машины модель + марка
+  class App < Sinatra::Base
+    set :root, File.dirname(__FILE__)
+    set :views, settings.root + '/views'
+
+    get '/categories' do
+    end
+
+    get '/hello_world' do
+      erb :hello_world
+    end
   end
 end
-
-CarApplication.process
