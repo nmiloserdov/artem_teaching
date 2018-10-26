@@ -15,5 +15,12 @@ module CarApplication
     get '/hello_world' do
       erb :hello_world
     end
-  end
+
+module CarApplication
+  # def self.process
+  #   puts Product.sum_of_prices
+  #   # Product.prices_sum - сумма всех цен продуктов
+  #   # product.full_name  - полное название машины модель + марка
+  # end
 end
+
