@@ -8,8 +8,21 @@ module CarApplication
     set :root, File.dirname(__FILE__)
     set :views, settings.root + '/views'
 
+    # erb :index, locals: { products: Models::Product.all }
+    get '/' do
+      erb :index
+    end
+
+    get '/categories' do
+      erb :categories
+    end
+
     get '/products' do
-       erb :index, locals: { products: Models::Product.all }
+      erb :products
+    end
+
+    get '/info' do
+      erb :info
     end
 
     get '/hello_world' do
