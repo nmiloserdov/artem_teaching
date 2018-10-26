@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My first web site.</title>
-  </head>
-  <body>
-    <!-- TODO: В нашем салоне ... Product.count автомобилей, на общую сумму Product.prices_sum ... -->
-
-    <a href='/'>Main</a>
-    <a href='/hello_world'>Hello world</a>
-    <h1>Main</h1>
-    <ul>
-      <% products.each do |product| %>
-        <li><%= product.brand_name + ' - ' + product.model %></li>
-        <li><%= # product.full_name - модель - плюс марка %></li>
-      <% end %>
-    </ul>
-  </body>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>IQ = 299</title>
+</head>
+<body>
+  <ul class="nav">
+    <li class="main-menu">
+      <a href="">Main menu</a>
+      <a href="">Categories</a>
+      <a href="">Products</a>
+      <a href="">Info</a>
+    </li>
+    <!-- <li class="settings">
+      <a href="">Settings</a>
+      <a href="">Account</a>
+      <a href="">Notifications</a>
+      <a href="">Display</a>
+    </li>
+    <li class="link">
+      <a href="">LInk</a>
+      <a href="">Embed</a>
+      <a href="">Short link</a>
+      <a href="">Full link</a>
+    </li>
+    <li class="search">
+      <a href="">Search</a>
+      <a href="">Item1</a>
+      <a href="">Item2</a>
+      <a href="">Item3</a>
+    </li> -->
+  </ul>
+</body>
 </html>

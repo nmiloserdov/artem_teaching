@@ -8,19 +8,25 @@ module CarApplication
     set :root, File.dirname(__FILE__)
     set :views, settings.root + '/views'
 
+    # erb :index, locals: { products: Models::Product.all }
+    get '/' do
+      erb :index
+    end
+
+    get '/categories' do
+      erb :categories
+    end
+
     get '/products' do
-       erb :index, locals: { products: Models::Product.all }
+      erb :products
+    end
+
+    get '/info' do
+      erb :info
     end
 
     get '/hello_world' do
       erb :hello_world
     end
-
-module CarApplication
-  # def self.process
-  #   puts Product.sum_of_prices
-  #   # Product.prices_sum - сумма всех цен продуктов
-  #   # product.full_name  - полное название машины модель + марка
-  # end
+  end
 end
-
